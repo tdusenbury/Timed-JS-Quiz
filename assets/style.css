@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
 }
 
 #start-box {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: green;
     color: darkblue;
     width: 800px;
@@ -45,4 +45,14 @@ body {
     padding: 10px 50px;
     border: none;
     border-radius: 5px;
+}
+
+#scoreButton {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px:0%
 }

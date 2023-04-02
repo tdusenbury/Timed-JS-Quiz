@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--HEAD with CSS link-->
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -9,14 +9,28 @@
         <title>QUIZ TIME!</title>
     </head>
 
-
+<!--BODY-->
     <body>
+        <!--When application loads, you see a box-->
         <div class="welcome-box" id="start-box">
-            <h1>IT'S QUIZ TIME!</h1>
+            <h1>IT'S JavaScript QUIZ TIME!</h1>
                 <h2>Take the Quiz by Pressing the Start Button</h2>
                     <p>Try to answer the following questions in 60 seconds!</p>
-                    <p>Wrong answers will deduct 15 seconds from your score/time!</p>
-            <button type="button" id="myBtn" onclick="myFunction()">Start Quiz</button>
+                    <p>Wrong answers will deduct 15 seconds from your time!</p>
+            <button type="button" id="myBtn">Start Quiz</button>
+        </div>
+
+        <div class="highscore-box" id="highscorebox">
+            <button type="button" id="scoreButton" onlick="myFunction()">Top Ten High Scores</button>
+        </div>
+
+        <div class="question-box" id="question-box">
+            <form id = "js-quiz" name = "js-quiz">
+                <p> </p>
+
+            </form>
+
+
         </div>
         
        <div class="timer">

@@ -11,35 +11,34 @@
 
 <!--BODY-->
     <body>
-        <!--When application loads, you see a box-->
-        <div class="welcome-box" id="start-box">
-            <h1>IT'S JavaScript QUIZ TIME!</h1>
-                <h2>Take the Quiz by Pressing the Start Button</h2>
+        <div class="container">
+            <!--Welcom Box (Large green box)-->
+            <div class="welcome-box" id="start-box">
+                <h1>IT'S JavaScript QUIZ TIME!</h1> 
+                    <h2>Take the Quiz by Pressing the Start Button</h2>
                     <p>Try to answer the following questions in 60 seconds!</p>
                     <p>Wrong answers will deduct 15 seconds from your time!</p>
-            <button type="button" id="myBtn">Start Quiz</button>
-        </div>
+                    <!--This button starts the quiz-->
+                    <button type="button" id="startButton">Start Quiz</button>
+            </div>
 
-        <div class="highscore-box" id="highscorebox">
-            <button type="button" id="scoreButton" onlick="myFunction()">Top Ten High Scores</button>
-        </div>
+            <!--Button to go to High Score screen (Small blue box)-->
+            <div class="scoreBox">
+                <button type="button" id="scoreButton">Top Ten High Scores</button>
+            </div>
 
-        <div class="question-box" id="question-box">
-            <form id = "js-quiz" name = "js-quiz">
-                <p> </p>
+            <!--Question box page-->
+            <div class="question-box">
+                <div class="question_text"></div>
+                <div class="question_choices"></div>
+            </div>
 
-            </form>
-
-
-        </div>
-        
-       <div class="timer">
+        </div>  
+       <!--<div class="timer">
             <h1>Timer</h1>
             <h2 id="countdown"></h2>
             <p id="main"></p>
-
-
-       </div>
+        </div> -->
 
        <script src="./assets/script.js"></script>
     </body>

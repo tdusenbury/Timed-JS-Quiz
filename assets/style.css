@@ -34,7 +34,7 @@ body {
     font-size: 25px;
     color: black;
 }
-#startButton {
+#start-button {
     background-color: black;
     color: white;
     text-align: center;
@@ -44,7 +44,7 @@ body {
     border: none;
     border-radius: 5px;
 }
-#scoreButton {
+#score-button {
     background-color: darkblue;
     color: white;
     max-width: 100%;
@@ -60,6 +60,53 @@ body {
     margin-left: auto;
     margin-right: auto;
     flex-basis: auto
+}
+.question-box {
+    visibility: hidden;
+    background-color: green;
+    color: darkblue;
+    max-width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    box-shadow: black 0 6px 8px;
+    flex-basis: auto;
+}
+.question-header {
+    padding: 5px;
+}
+h2 {
+    padding: 5px;
+    text-align: justify;
+    margin: 0;
+}
+ul {
+    padding: 5px;
+    list-style-type: none;
+
+}
+ul li {
+    margin: auto 0;
+    font-size: 16px;
+}
+
+ul li label {
+    cursor: pointer;
+}
+
+#ques-next-btn {
+    padding: 5px;
+    border: none;
+    display: block;
+    color: black;
+    background-color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: 10px;
 }
 @media screen and (max-width: 768px) {
     width: 100%;

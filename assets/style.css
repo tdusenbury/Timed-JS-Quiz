@@ -58,6 +58,7 @@ body {
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
     flex-basis: auto;
 }
 
@@ -74,7 +75,7 @@ body {
     top:10%;
     left: 30%;
     box-shadow: black 0 6px 8px;
-
+    flex-basis: auto;
 }
 .question-header {
     padding: 5px;

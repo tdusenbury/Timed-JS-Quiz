@@ -7,13 +7,14 @@
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
 | JavaScript | [https://www.w3schools.com/jsref/event_onclick.asp](https://www.w3schools.com/jsref/event_onclick.asp);  [https://www.w3schools.com/jsref/dom_obj_pushbutton.asp](https://www.w3schools.com/jsref/dom_obj_pushbutton.asp); 
+[https://www.w3schools.com/jsref/prop_style_position.asp](https://www.w3schools.com/jsref/prop_style_position.asp); 
 
-[https://www.w3schools.com/css/css3_buttons.asp](https://www.w3schools.com/css/css3_buttons.asp); [https://www.w3schools.com/jsref/prop_win_length.aspWeb/CSS](https://www.w3schools.com/jsref/prop_win_length.asp); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random); [https://www.w3schools.com/js/js_objects.asp](https://www.w3schools.com/js/js_objects.asp); [https://www.w3schools.com/js/js_strings.asp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
+
+[https://www.w3schools.com/jsref/prop_win_length.aspWeb/CSS](https://www.w3schools.com/jsref/prop_win_length.asp); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random); [https://www.w3schools.com/js/js_objects.asp](https://www.w3schools.com/js/js_objects.asp); [https://www.w3schools.com/js/js_strings.asp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 
 ## Description 
 
-This application is a Password Generator. The Password Generator gives the user a series of questions including how long they would like their password and whether or not to include such characters as lower case alphabet, upper case alphabet, numbers, or symbols. Additionally, if the user chooses a password length that is too short or too long, a message appears with the available options. Also, a message alerts the user if they did not choose any character options and the process begins again.
-
+This application is a JavaScript Quiz. The Quiz has a start button that begins the quiz. A timer starts when the quiz begins. The next question appears once an answer is chosen. If a question is asked incorrectly, the timer is reduced by 15 seconds. The user plays until all questions are answered or the timer reaches zero. The user is then presented with their score and the option to enter their initials to be saved to the high score page. 
 
 
 

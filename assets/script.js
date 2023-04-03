@@ -79,7 +79,6 @@ function startQuiz() {
     cQuestion.innerText = newQuizData.c
     dQuestion.innerText = newQuizData.d
 }
-
 function findAnswer() {
     var answer = "";
     const checkAnswer = document.getElementsByClassName("answer");
@@ -96,18 +95,14 @@ function findAnswer() {
             }
         }   
     }
-    clearAnswers();
-    startQuiz();
+clearAnswers();
+startQuiz();
 }
-
 function clearAnswers() {
         const checkAnswer = document.getElementsByClassName("answer");
         for(var i = 0; i < checkAnswer.length; i++) {
             checkAnswer[i].checked = false;
         }
 }
-
-
-
 
 

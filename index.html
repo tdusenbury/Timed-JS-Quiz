@@ -11,16 +11,21 @@
 
 <!--BODY-->
     <body>
-        <!--container for everything on initial load page-->
+        <header>
+            <button id="start-button">Start Quiz</button>
+            <h1 id="theFinalCountdown"></h1>
+        </header>
+        
         <div class="start-container" id="start-container">
+
             <!--Welcome Box (Large green box)-->
-            <div class="start-box" id="start-box">
+            <section id="start-box">
              <h1>It's JavaScript QUIZ TIME!</h1> 
                 <h2>Take the Quiz by Pressing the Start Button</h2>
                     <p>Try to answer the following questions in 60 seconds!</p>
                     <p>Wrong answers will deduct 15 seconds from your time!</p>
                 <!--This button starts the quiz-->
-                <button type="button" id="start-button">Start Quiz</button>
+                <button id="start-button">Start Quiz</button>
                 <!--Button to go to High Score screen (Small blue box)-->
                 <div class="score-button">
                      <button type="button" id="score-button">Top Ten High Scores</button>

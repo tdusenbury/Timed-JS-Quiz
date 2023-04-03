@@ -73,7 +73,6 @@ function startQuiz() {
     const removeStartBox = document.getElementById("start-container");
     seeQuiz.style.display = "flex";
     removeStartBox.style.visibility = "hidden";
-
     question.innerText = newQuizData.question
     aQuestion.innerText = newQuizData.a
     bQuestion.innerText = newQuizData.b
@@ -88,7 +87,7 @@ function findAnswer() {
         if(checkAnswer[i].checked) {
             answer = checkAnswer[i].value;
             console.log(answer);
-            if(answer === quizQuestions[quizStart].answer ) {
+            if(answer === quizQuestions[quizStart].answer) {
                 quizStart++
                 score++
             }else {

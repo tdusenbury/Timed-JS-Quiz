@@ -6,11 +6,9 @@
 
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
-| JavaScript | [https://www.w3schools.com/jsref/event_onclick.asp](https://www.w3schools.com/jsref/event_onclick.asp);  [https://www.w3schools.com/jsref/dom_obj_pushbutton.asp](https://www.w3schools.com/jsref/dom_obj_pushbutton.asp); 
-[https://www.w3schools.com/jsref/prop_style_position.asp](https://www.w3schools.com/jsref/prop_style_position.asp); 
-
-
-[https://www.w3schools.com/jsref/prop_win_length.aspWeb/CSS](https://www.w3schools.com/jsref/prop_win_length.asp); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random); [https://www.w3schools.com/js/js_objects.asp](https://www.w3schools.com/js/js_objects.asp); [https://www.w3schools.com/js/js_strings.asp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
+| JavaScript | [https://www.w3schools.com/jsref/event_onclick.asp](https://www.w3schools.com/jsref/event_onclick.asp);  [https://www.w3schools.com/jsref/dom_obj_pushbutton.asp](https://www.w3schools.com/jsref/dom_obj_pushbutton.asp); [https://www.w3schools.com/jsref/prop_style_position.asp](https://www.w3schools.com/jsref/prop_style_position.asp); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array);[https://www.w3schools.com/jsref/prop_win_localstorage.asp](https://www.w3schools.com/jsref/prop_win_localstorage.asp);
+ 
+  [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random); [https://www.w3schools.com/js/js_objects.asp](https://www.w3schools.com/js/js_objects.asp); [https://www.w3schools.com/js/js_strings.asp](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
 
 ## Description 
 

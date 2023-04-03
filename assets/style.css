@@ -6,10 +6,40 @@ body {
     background-color: lightblue;
 }
 
-#start-container {
-    visibility: visible;
+#score-button {
+    background-color: darkblue;
+    color: white;
+    max-width: 100%;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    text-align:center;
+    font-size: 25px;  
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    flex-basis: auto;
+}
+#return-home-button {
+    background-color: darkblue;
+    color: white;
+    max-width: 100%;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    text-align:center;
+    font-size: 25px;  
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    flex-basis: auto;
 }
 #start-box {
+    visibility: visible;
     background-color: green;
     color: darkblue;
     max-width: 50%;
@@ -44,22 +74,7 @@ body {
     border: none;
     border-radius: 5px;
     box-shadow: white 0 6px 8px;
-}
-#score-button {
-    background-color: darkblue;
-    color: white;
-    max-width: 100%;
-    padding: 10px 50px;
-    border: none;
-    border-radius: 5px;
-    text-align:center;
-    font-size: 25px;  
-    display: inline-block;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    flex-basis: auto;
+    margin-bottom: 15px;
 }
 
 #inside-quiz-container {
@@ -77,40 +92,94 @@ body {
     box-shadow: black 0 6px 8px;
     flex-basis: auto;
 }
-.question-header {
-    padding: 5px;
-}
-h2 {
+
+#question h2 {
     padding: 5px;
     text-align: justify;
     margin: 0;
 }
-ul {
+#question-list {
     padding: 5px;
     list-style-type: none;
-
-}
-ul li {
-    margin: auto 0;
+    margin: auto;
     font-size: 20px;
-}
-
-ul li label {
     cursor: pointer;
 }
-
-#ques-next-btn {
-    margin-top: 20px;
+#winner-loser {
+    color: lightblue;
+    font-size: 15px;
+}
+#score-report {
+    background-color: green;
+    color: darkblue;
+    max-width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    box-shadow: black 0 6px 8px;
+    flex-basis: auto;
+}
+#final-score-initials-button {
     background-color: black;
     color: white;
     text-align: center;
-    font-size: 24px;
-    display: block;
+    font-size: 30px;
+    display: inline-block;
     padding: 10px 50px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    position: relative;
+    box-shadow: white 0 6px 8px;
+    margin-bottom: 15px;
+}
+
+#top-score-container {
+    background-color: green;
+    color: darkblue;
+    max-width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    box-shadow: black 0 6px 8px;
+    flex-basis: auto;
+}
+#score-list {
+    background-color: green;
+    color: darkblue;
+    max-width: 50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+    text-align:center;
+    position: absolute;
+    top:10%;
+    left: 30%;
+    box-shadow: black 0 6px 8px;
+    flex-basis: auto;
+}
+#reset-score-list {
+    background-color: darkblue;
+    color: white;
+    max-width: 100%;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    text-align:center;
+    font-size: 25px;  
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    flex-basis: auto;
+}
 
 }
 @media screen and (max-width: 768px) {

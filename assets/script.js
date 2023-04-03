@@ -5,7 +5,7 @@ const quizQuestions = [
         b: "Hoisted by your own petard",
         c: "If, else, and/or switch",
         d: "Stringify",
-        correct: "c",
+        answer: "c"
     },
 
     {
@@ -14,7 +14,7 @@ const quizQuestions = [
         b: "Array Data Types",
         c: "For Loops",
         d: "Primitive Data Types",
-        correct: "d",
+        answer: "d"
     },
 
     {
@@ -23,7 +23,7 @@ const quizQuestions = [
         b: "Only Numerical Values",
         c: "Many Values",
         d: "Imaginary Values",
-        correct: "c",
+        answer: "c"
     },
 
     {
@@ -32,7 +32,7 @@ const quizQuestions = [
         b: "Equal Signs",
         c: "Square Parenthesis",
         d: "Quotation Marks",
-        correct: "d",
+        answer: "d"
     },
 
     {
@@ -41,104 +41,74 @@ const quizQuestions = [
         b: "methodActing()",
         c: "The pop() Method",
         d: "The string() Method",
-        correct: "c",
+        answer: "c"
     }
 ];
 
 //defining elements between html, css, and js start screen
-const startBox = document.getElementById("start-box");
+
 const startButton = document.getElementById("start-button");
-const scoreBox = document.querySelector(".score-box");
-const scoreButton = document.querySelector("score-button");
+const scoreBox = document.getElementById("score-box");
+const scoreButton = document.getElementById("score-button");
 //defining elements between html, css, and js quiz screen
-const quiz = getElementById("quiz");
+const quiz = document.getElementById("quiz");
 const question = document.getElementById("question");
-const answer = document.querySelectorAll(".answer");
-const aQuestion = document.getElementById("a-question");
-const bQuestion = document.getElementById("b-question");
-const cQuestion = document.getElementById("c-question");
-const dQuestion = document.getElementById("d-question");
+//const answer = document.querySelectorAll(".answer");
+const aQuestion = document.getElementById("a_question");
+const bQuestion = document.getElementById("b_question");
+const cQuestion = document.getElementById("c_question");
+const dQuestion = document.getElementById("d_question");
 const nextButton = document.getElementById("ques-next-btn");
 
 
 startButton.addEventListener("click", startQuiz);
+nextButton.addEventListener("click", findAnswer)
+
+let quizStart = 0;
+let score = 0;
 
 function startQuiz() { 
-    const seeQuiz = document.getElementById("quiz");
-    const removeStartBox = document.getElementById("start-box");
-    seeQuiz.style.display="flex";
-    removeStartBox.style.visibility="hidden";
-    const newQuizData = quizData[newQuiz]
-    question.innerText = newQuizData.question;
-    aQuestion.innerText = newQuizData.a;
-    bQuestion.innerText = newQuizData.b;
-    cQuestion.innerText = newQuizData.c;
-    dQuestion.innerText = newQuizData.d;
+    const newQuizData = quizQuestions[quizStart];
+    const seeQuiz = document.getElementById("inside-quiz-container");
+    const removeStartBox = document.getElementById("start-container");
+    seeQuiz.style.display = "flex";
+    removeStartBox.style.visibility = "hidden";
+
+    question.innerText = newQuizData.question
+    aQuestion.innerText = newQuizData.a
+    bQuestion.innerText = newQuizData.b
+    cQuestion.innerText = newQuizData.c
+    dQuestion.innerText = newQuizData.d
 }
 
-function deselectAnswers() {
-    answer.forEach(answer => answer.checked = false)
+function findAnswer() {
+    var answer = "";
+    const checkAnswer = document.getElementsByClassName("answer");
+    for(var i = 0; i < checkAnswer.length; i++) {
+        if(checkAnswer[i].checked) {
+            answer = checkAnswer[i].value;
+            console.log(answer);
+            if(answer === quizQuestions[quizStart].answer ) {
+                quizStart++
+                score++
+            }else {
+                quizStart++;
+                alert ("That is the wrong answer.");
+            }
+        }   
+    }
+    clearAnswers();
+    startQuiz();
 }
 
-function getSelected() {
-    let answer
-    answer.forEach(answer => {
-        if(answer.checked) {
-            answer = answer.id
+function clearAnswers() {
+        const checkAnswer = document.getElementsByClassName("answer");
+        for(var i = 0; i < checkAnswer.length; i++) {
+            checkAnswer[i].checked = false;
         }
-    })
-    return answer
 }
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var timerElement = document.getElementById('countdown');
-var timerElement = document.getElementById('main');
-
-function countdown() {
-    var timeLeft = 60;
-
-    var timeInterval = setInterval(function () {
-        if (timeLeft >1) {
-            timerElement.textContent = timeLeft + ' seconds remaining';
-            timeLeft--;
-        } else if (timeLeft === 1) {
-            timerElement.textContent = timeLeft + 'second remaining';
-            timeLeft--;
-        } else {
-            timerElement.textContent= '' + 'QUIZ OVER'
-        } 
-    }, 60000);
-}

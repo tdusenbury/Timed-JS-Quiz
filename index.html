@@ -11,52 +11,58 @@
 
 <!--BODY-->
     <body>
-        <!--Welcome Box (Large green box)-->
-        <div class="start-box" id="start-box">
-            <h1>IT'S JavaScript QUIZ TIME!</h1> 
+        <!--container for everything on initial load page-->
+        <div class="start-container" id="start-container">
+            <!--Welcome Box (Large green box)-->
+            <div class="start-box" id="start-box">
+             <h1>IT'S JavaScript QUIZ TIME!</h1> 
                 <h2>Take the Quiz by Pressing the Start Button</h2>
                 <p>Try to answer the following questions in 60 seconds!</p>
                 <p>Wrong answers will deduct 15 seconds from your time!</p>
                     <!--This button starts the quiz-->
                 <button type="button" id="start-button">Start Quiz</button>
+            </div>
+
+            <!--Button to go to High Score screen (Small blue box)-->
+            <div class="score-box" id="score-box">
+                <button type="button" id="score-button">Top Ten High Scores</button>
+             </div>
         </div>
 
-        <!--Button to go to High Score screen (Small blue box)-->
-        <div class="score-box">
-            <button type="button" id="score-button">Top Ten High Scores</button>
-        </div>
 
-        <!--Question box page-->
-        <div class="quiz" id="quiz">
-            <div class="question-header">
-            <h2 id = "question">Question Text</h2>
-                <ul>
+        <!--container for everything on the page with the quiz-->
+        <div class="quiz-container" id="quiz">
+            <!--the quiz-->
+            <div class="inside-quiz-container" id="inside-quiz-container">
+                <div class="question-header">
+                    <h2 id ="question">Question Text</h2>
+                    <ul>
                     <li>
                         <input type="radio" class="answer" id="a" name="answer">
-                        <label for="a" id="a-question">Answer</label>
+                        <label for="a" id="a_question">Answer</label>
                     </li>
 
                     <li>
                         <input type="radio" class="answer" id="b" name="answer">
-                         <label for="b" id="b-question">Answer</label>
+                         <label for="b" id="b_question">Answer</label>
                     </li>
 
                     <li>
                         <input type="radio" class="answer" id="c" name="answer">
-                        <label for="c" id="c-question">Answer</label>
+                        <label for="c" id="c_question">Answer</label>
                     </li>
 
                     <li>
                         <input type="radio" class="answer" id="d" name="answer">
-                        <label for="d" id="d-question">Answer</label>
+                        <label for="d" id="d_question">Answer</label>
                     </li>
                     <!--Button to next question-->
                     <button type="button" id="ques-next-btn">Next</button>
-                </ul>
+                    </ul>
+                </div>
             </div>   
         </div>
-        <!--Link JavaScript-->
-
+        <!--Link JavaScript-->       
        <script src="./assets/script.js"></script>
     </body>
 

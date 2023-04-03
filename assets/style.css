@@ -3,10 +3,12 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body {
-    margin:10;
     background-color: lightblue;
 }
 
+#start-container {
+    visibility: visible;
+}
 #start-box {
     background-color: green;
     color: darkblue;
@@ -20,7 +22,6 @@ body {
     left: 30%;
     box-shadow: black 0 6px 8px;
     flex-basis: auto;
-    visibility: visible;
 }
 #start-box h1 {
     font-size: 50px;
@@ -58,9 +59,10 @@ body {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
-    flex-basis: auto
+    flex-basis: auto;
 }
-#quiz {
+
+#inside-quiz-container {
     display: none;
     background-color: green;
     color: darkblue;
@@ -73,7 +75,7 @@ body {
     top:10%;
     left: 30%;
     box-shadow: black 0 6px 8px;
-    flex-basis: auto;
+
 }
 .question-header {
     padding: 5px;

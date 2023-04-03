@@ -42,34 +42,53 @@ const quizQuestions = [
         c: "The pop() Method",
         d: "The string() Method",
         correct: "c",
-    },
+    }
 ];
 
 //defining elements between html, css, and js start screen
-const startBox = document.querySelector("#start-box");
-const startButton = document.querySelector("#start-button");
+const startBox = document.getElementById("start-box");
+const startButton = document.getElementById("start-button");
 const scoreBox = document.querySelector(".score-box");
-const scoreButton = document.querySelector("#score-button");
+const scoreButton = document.querySelector("score-button");
 //defining elements between html, css, and js quiz screen
-const questionBox = document.querySelector(".question-box");
 const quiz = getElementById("quiz");
-const question = document.getElementById("#question");
-const answer = document.querySelector(".answer");
+const question = document.getElementById("question");
+const answer = document.querySelectorAll(".answer");
 const aQuestion = document.getElementById("a-question");
 const bQuestion = document.getElementById("b-question");
 const cQuestion = document.getElementById("c-question");
 const dQuestion = document.getElementById("d-question");
-const nextButton = document.querySelector("#ques-next-btn");
+const nextButton = document.getElementById("ques-next-btn");
 
 
+startButton.addEventListener("click", startQuiz);
 
-
-
-startButton.onclick = ()=> {
-    questionBox.classList.add("activeInfo")
+function startQuiz() { 
+    const seeQuiz = document.getElementById("quiz");
+    const removeStartBox = document.getElementById("start-box");
+    seeQuiz.style.display="flex";
+    removeStartBox.style.visibility="hidden";
+    const newQuizData = quizData[newQuiz]
+    question.innerText = newQuizData.question;
+    aQuestion.innerText = newQuizData.a;
+    bQuestion.innerText = newQuizData.b;
+    cQuestion.innerText = newQuizData.c;
+    dQuestion.innerText = newQuizData.d;
 }
 
-document.getElementById("question-box").style.visibility = "visible";
+function deselectAnswers() {
+    answer.forEach(answer => answer.checked = false)
+}
+
+function getSelected() {
+    let answer
+    answer.forEach(answer => {
+        if(answer.checked) {
+            answer = answer.id
+        }
+    })
+    return answer
+}
 
 
 

@@ -6,9 +6,7 @@ body {
     margin:10;
     background-color: lightblue;
 }
-.container {
-    
-}
+
 #start-box {
     background-color: green;
     color: darkblue;
@@ -22,6 +20,7 @@ body {
     left: 30%;
     box-shadow: black 0 6px 8px;
     flex-basis: auto;
+    visibility: visible;
 }
 #start-box h1 {
     font-size: 50px;
@@ -61,8 +60,8 @@ body {
     margin-right: auto;
     flex-basis: auto
 }
-.question-box {
-    visibility: hidden;
+#quiz {
+    display: none;
     background-color: green;
     color: darkblue;
     max-width: 50%;

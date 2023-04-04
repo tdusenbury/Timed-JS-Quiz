@@ -23,6 +23,7 @@ body {
     flex-basis: auto;
 }
 #return-home-button {
+    visibility: hidden;
     background-color: darkblue;
     color: white;
     max-width: 100%;
@@ -78,7 +79,8 @@ body {
 }
 
 #inside-quiz-container {
-    display: none;
+    visibility: 
+    display: flex;
     background-color: green;
     color: darkblue;
     max-width: 50%;
@@ -93,6 +95,18 @@ body {
     flex-basis: auto;
 }
 
+#timer-box {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: white 0 6px 8px;
+    margin-bottom: 15px;
+}
 #question h2 {
     padding: 5px;
     text-align: justify;
@@ -109,7 +123,7 @@ body {
     color: lightblue;
     font-size: 15px;
 }
-#score-report {
+#score-report-container {
     background-color: green;
     color: darkblue;
     max-width: 50%;
@@ -123,6 +137,12 @@ body {
     box-shadow: black 0 6px 8px;
     flex-basis: auto;
 }
+
+#initials {
+    background-color: white;
+    color: black;
+}
+
 #final-score-initials-button {
     background-color: black;
     color: white;
@@ -164,21 +184,17 @@ body {
     box-shadow: black 0 6px 8px;
     flex-basis: auto;
 }
-#reset-score-list {
-    background-color: darkblue;
+#reset-button {
+    background-color: black;
     color: white;
-    max-width: 100%;
+    text-align: center;
+    font-size: 30px;
+    display: inline-block;
     padding: 10px 50px;
     border: none;
     border-radius: 5px;
-    text-align:center;
-    font-size: 25px;  
-    display: inline-block;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-    flex-basis: auto;
+    box-shadow: white 0 6px 8px;
+    margin-bottom: 15px;
 }
 
 }

@@ -19,7 +19,7 @@
         
         <div id="start-container">
 
-            <!--Welcome Box (Large green box)-->
+            <!--first loading page-->
             <section id="start-box">
              <h1>It's JavaScript QUIZ TIME!</h1> 
                 <h2>Take the Quiz by Pressing the Start Button</h2>
@@ -43,17 +43,22 @@
                         <li><button id="d_question" class = "checkAnswerButton"></button>
                         </ul>
                 <h3 id = "winner-loser"></h3>
+                <div id="timer-box">
+                    <div id="time-left">Time Remaining</div>
+                    <div id="timer">60</div>
+                </div>
             </section>
         </div>
 
+        <!--container for report after quiz-->
         <div id="score-report-container">
-            <section id = "score-report">
                 <h2 id = "final-score"></h2>
                 <p>Please enter your initials here!</p>
+                <input type = "text" id ="initials">
                 <button id = "final-score-initials-button">Submit</button>
-            </section>
         </div>  
         
+        <!--container for top score list-->
         <div id = "top-score-container">
                 <h2>The Winners!!</h2>
                 <ol id="score-list"></ol>

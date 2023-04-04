@@ -6,8 +6,8 @@
 
 | Technology Used         | Resource URL           | 
 | ------------- |:-------------:| 
-| JavaScript | [https://www.w3schools.com/jsref/event_onclick.asp](https://www.w3schools.com/jsref/event_onclick.asp);  [https://www.w3schools.com/jsref/dom_obj_pushbutton.asp](https://www.w3schools.com/jsref/dom_obj_pushbutton.asp); [https://www.w3schools.com/jsref/prop_style_position.asp](https://www.w3schools.com/jsref/prop_style_position.asp); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array);[https://www.w3schools.com/jsref/prop_win_localstorage.asp](https://www.w3schools.com/jsref/prop_win_localstorage.asp);
-[https://www.w3schools.com/js/tryit.asp?filename=tryjson_store](https://www.w3schools.com/js/tryit.asp?filename=tryjson_store); 
+| JavaScript | [https://www.w3schools.com/jsref/event_onclick.asp](https://www.w3schools.com/jsref/event_onclick.asp);  [https://www.w3schools.com/jsref/dom_obj_pushbutton.asp](https://www.w3schools.com/jsref/dom_obj_pushbutton.asp); [https://www.w3schools.com/jsref/prop_style_position.asp](https://www.w3schools.com/jsref/prop_style_position.asp); [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array);[https://www.w3schools.com/jsref/prop_win_localstorage.asp](https://www.w3schools.com/jsref/prop_win_localstorage.asp);[https://www.w3schools.com/js/tryit.asp?filename=tryjson_store](https://www.w3schools.com/js/tryit.asp?filename=tryjson_store); 
+
 
 ## Description 
 
@@ -20,7 +20,7 @@ This application is a JavaScript Quiz. The Quiz was to have a start button that 
 
 
 
-[Visit the Deployed Site](https://tdusenbury.github.io/Password-Generator-Project/)
+[Visit the Deployed Site](https://tdusenbury.github.io/Timed-JS-Quiz/)
 
 
 ## Code Example

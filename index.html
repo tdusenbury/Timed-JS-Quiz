@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--HEAD with CSS link-->
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="X-UA Compatible" content="ie=edge" />
-        <link rel="stylesheet" href="./assets/style.css"/>
-        <title>QUIZ TIME!</title>
-    </head>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <title>QUIZ TIME!</title>
+</head>
 
 <!--BODY-->
-    <body>
-        <header>
-            <button id="score-button">Top Scores</button>
-            <button id="return-home-button">Back to Home</button>
-            <h1 id="theFinalCountdown"></h1>
-        </header>
-        
-        <div id="start-container">
+<body>
+    <header>
+        <button id="score-button">Top Scores</button>
+        <button id="return-home-button">Back to Home</button>
+        <h1 id="theFinalCountdown"></h1>
+    </header>
+    
+    <div id="start-container">
+        <!--first loading page-->
+        <section id="start-box">
+            <h1>It's JavaScript QUIZ TIME!</h1> 
+            <h2>Take the Quiz by Pressing the Start Button</h2>
+            <p>Try to answer the following questions in 60 seconds!</p>
+            <p>Wrong answers will deduct 15 seconds from your time!</p>
+            <!--This button starts the quiz-->
+            <button id="start-button">Start Quiz</button>
+        </section>
+    </div>
 
-            <!--first loading page-->
-            <section id="start-box">
-             <h1>It's JavaScript QUIZ TIME!</h1> 
-                <h2>Take the Quiz by Pressing the Start Button</h2>
-                    <p>Try to answer the following questions in 60 seconds!</p>
-                    <p>Wrong answers will deduct 15 seconds from your time!</p>
-                <!--This button starts the quiz-->
-                <button id="start-button">Start Quiz</button>
-            </section>
-        </div>
+    <!--container for everything on the page with the quiz-->
+    <div id="quiz-container" style="display: none;">
+        <!--the quiz-->
+        <section id="inside-quiz-container">
+            <h2 id="question"></h2>
+            <ul id="question-list">
+                <li>
+                    <p id="a_question" class="checkAnswerButton"></p>
+                </li>
+                <li>
+                    <p id="b_question" class="checkAnswerButton"></p>
+                </li>
+                <li>
+                    <p id="c_question" class="checkAnswerButton"></p>
+                </li>
+                <li>
+                    <p id="d_question" class="checkAnswerButton"></p>
+                </li>
+            </ul>
+            <h3 id="winner-loser"></h3>
+            <div id="timer-box">
+                <div id="time-left">Time Remaining</div>
+                <div id="timer">60</div>
+            </div>
+            <h4 id = "answer"></h4>
+        </section>
+    </div>
 
-
-        <!--container for everything on the page with the quiz-->
-        <div id="quiz-container">
-            <!--the quiz-->
-            <section id="inside-quiz-container">
-                <h2 id ="question"></h2>
-                    <ul id="question-list">
-                        <li><button id="a_question" class = "checkAnswerButton"></button>
-                        <li><button id="b_question" class = "checkAnswerButton"></button>
-                        <li><button id="c_question" class = "checkAnswerButton"></button>
-                        <li><button id="d_question" class = "checkAnswerButton"></button>
-                        </ul>
-                <h3 id = "winner-loser"></h3>
-                <div id="timer-box">
-                    <div id="time-left">Time Remaining</div>
-                    <div id="timer">60</div>
-                </div>
-            </section>
-        </div>
-
-        <!--container for report after quiz-->
-        <div id="score-report-container">
-                <h2 id = "final-score"></h2>
-                <p>Please enter your initials here!</p>
-                <input type = "text" id ="initials">
-                <button id = "final-score-initials-button">Submit</button>
-        </div>  
-        
-        <!--container for top score list-->
-        <div id = "top-score-container">
-                <h2>The Winners!!</h2>
-                <ol id="score-list"></ol>
-                <button id = "reset-button">Reset Score List</button>
-        </div>
-        <!--Link JavaScript-->       
-       <script src="./assets/script.js"></script>
-    </body>
+    <!--container for report after quiz-->
+    <div id="score-report-container" style="display: none;">
+        <h2 id="final-score"></h2>
+        <p>Please enter your initials here!</p>
+        <input type="text" id="initials">
+        <button id="final-score-initials-button">Submit</button>
+    </div>  
+    
+    <!--container for top score list-->
+    <div id="top-score-container" style="display: none;">
+        <h2>The Winners!!</h2>
+        <ol id="score-list"></ol>
+        <button id="reset-button">Reset Score List</button>
+    </div>
+    
+    <!--Link JavaScript-->       
+    <script src="./assets/script.js"></script>
+</body>
 
 </html>

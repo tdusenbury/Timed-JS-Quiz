@@ -81,6 +81,8 @@ function checkAnswerButton(event) {
 
 function scoreReportPage() {
     scoreReportContainer.style.display = "block";
+    scoreReportContainer.style.visibility = "visible";
+    console.log("I work!!!")
     finalScore.textContent = "Final score: " + finalScoreValue;
     homePage.style.visibility = "hidden";
     quizPage.style.visibility = "hidden";
@@ -88,12 +90,17 @@ function scoreReportPage() {
     returnHomeBtn.style.display = "flex";
     scoreButton.style.visibility = "hidden";
     timer.style.visibility = "hidden";
-    // window.location.reload();
 }
 
-function displayFinalScore() {
+function displayFinalScore(event) {
+  event.preventDefault();
     playerScore = finalScore.textContent;
-    localStorage.setItem(initials.value, playerScore);
+    var scores = JSON.parse(localStorage.getItem("scores"));
+    if (!scores) {
+      scores = [];
+    }
+    scores.push({initials: initials.value, score: finalScoreValue});
+    localStorage.setItem("scores", JSON.stringify(scores));
   }
   
 function resetScore() {
@@ -133,9 +140,10 @@ function recordScore() {
     if(secCount > 0 && questionIndex >= quizQuestionsArray.length) {
       answerCheck.textContent=`Well Done! Your Final Score Is: ${secCount}`;
       finalScoreValue = secCount;
+      setTimeout(scoreReportPage, 1000);
     } else {
       answerCheck.textContent=`No Good! Try Again!!`;
-    }
+    } 
 }
 
 function resetHome() {

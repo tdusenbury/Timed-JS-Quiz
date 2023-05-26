@@ -32,16 +32,11 @@ var quizQuestionsArray = [
 
 const returnHomeBtn = document.getElementById("return-home-button");
 const resetScoreBtn = document.getElementById("reset-button");
-const initialEntry = document.getElementById("score-list");
-//const finalScorePage = document.getElementById("top-score-container");
-// const scoreData = document.querySelector(".score-data")
 var startButton = document.getElementById("start-button");
 const scoreButton =document.getElementById("score-button");
 const homePage = document.getElementById("start-box");
 const answerCheck = document.getElementById("winner-loser");
-// const finalAnswer = document.getElementById("finalAnswer");
 const question = document.getElementById("question");
-//const questionList = document.getElementById("question-list");
 const quizPage = document.getElementById("quiz-container");
 var timerEl = document.getElementById("timer");
 var scoreReportContainer = document.getElementById("score-report-container");
@@ -61,7 +56,7 @@ var correctAnswer;
 startButton.addEventListener('click', startQuiz);
 scoreButton.addEventListener("click", topScorePage);
 resetScoreBtn.addEventListener("click", resetScore);
-returnHomeBtn.addEventListener("click", showStartPage);
+returnHomeBtn.addEventListener("click", resetHome);
 initialsBtn.addEventListener("click", saveFinalScore);
 
 const quizContainer = document.getElementById("inside-quiz-container");
@@ -97,9 +92,9 @@ function fillQuizBox() {
 function startTimer() {
   counter =setInterval(timer,1000);
 
-function timer() {
-  secCount--;
-  timerEl.innerText = "" + secCount;
+  function timer() {
+    secCount--;
+    timerEl.innerText = "" + secCount;
       if(secCount == 0) {
           clearInterval(counter);
           resetScore();
@@ -139,8 +134,7 @@ function scoreReportPage() {
     finalScore.textContent = "Final score: " + finalScoreValue;
     homePage.style.visibility = "hidden";
     quizPage.style.visibility = "hidden";
-    initialEntry.style.visibility = "hidden";
-    returnHomeBtn.style.display = "flex";
+    returnHomeBtn.style.display = "visible";
     scoreButton.style.visibility = "hidden";
     timer.style.visibility = "hidden";
     //topScorePage();
@@ -153,14 +147,13 @@ function topScorePage() {
   topScoreContainer.style.visibility = "visible";
   homePage.style.visibility = "hidden";
   quizPage.style.visibility = "hidden";
-  initialEntry.style.visibility = "hidden";
-  //returnHomeBtn.style.display = "flex";
+  returnHomeBtn.style.visibility = "visible";
   scoreButton.style.visibility = "hidden";
   timer.style.visibility = "hidden";
-  //scoreList.innerHTML = "";
+  scoreList.innerHTML = "";
   for (let i=0; i<scores.length; i++) {
     let li = document.createElement("LI");
-    li.textContent = scores[i].initials + " " + scores[i].score;
+    li.textContent = scores[i].initials + " "+ scores[i].score;
     scoreList.appendChild(li);
     console.log(scores[i].initials + " " + scores[i].score)
   }
@@ -184,8 +177,10 @@ function saveFinalScore(event) {
   }
   
 function resetScore() {
-    initialEntry.hidden = true;
-    window.localStorage.clear();
+    //initialEntry.hidden = true;
+  localStorage.clear();
+  document.getElementById("score-list").innerHTML = "";
+
 }
 
 function resetHome() {

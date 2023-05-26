@@ -49,6 +49,8 @@ const initialsBtn = document.getElementById("final-score-initials-button");
 const initials = document.getElementById("initials");
 const finalScore = document.getElementById("final-score");
 const message = document.getElementById("answer");
+var topScoreContainer = document.getElementById("top-score-container");
+var scoreList = document.getElementById("score-list");
 
 var playerScore = 0;
 var questionIndex = 0;
@@ -57,13 +59,64 @@ let counter;
 var correctAnswer;
 
 startButton.addEventListener('click', startQuiz);
-scoreButton.addEventListener("click", scoreReportPage);
+scoreButton.addEventListener("click", topScorePage);
 resetScoreBtn.addEventListener("click", resetScore);
 returnHomeBtn.addEventListener("click", showStartPage);
-initialsBtn.addEventListener("click", displayFinalScore);
+initialsBtn.addEventListener("click", saveFinalScore);
 
 const quizContainer = document.getElementById("inside-quiz-container");
 quizContainer.addEventListener('click', checkAnswerButton)
+
+function startQuiz() {
+  showQuizPage
+  var timeLeft = 60;
+  timerEl.textContent = timeLeft;
+  homePage.style.visibility = "hidden";
+  quizPage.style.display = "flex";
+  scoreReportContainer.style.visibility = "hidden";
+  returnHomeBtn.style.visibility = "hidden";
+  scoreButton.style.display = "flex";
+  startTimer();
+  fillQuizBox();
+}
+
+function fillQuizBox() {
+  if (questionIndex >= quizQuestionsArray.length) {
+    recordScore();
+    return;
+  }
+  var newQuestion = quizQuestionsArray[questionIndex];
+  question.innerText = newQuestion.questionText;
+  correctAnswer = newQuestion.correctAnswer;
+  a_question.innerText = newQuestion.answers[0];
+  b_question.innerText = newQuestion.answers[1];
+  c_question.innerText = newQuestion.answers[2];
+  d_question.innerText = newQuestion.answers[3];
+}
+ 
+function startTimer() {
+  counter =setInterval(timer,1000);
+
+function timer() {
+  secCount--;
+  timerEl.innerText = "" + secCount;
+      if(secCount == 0) {
+          clearInterval(counter);
+          resetScore();
+      }
+  }
+}
+
+function recordScore() {
+clearInterval(counter);
+  if(secCount > 0 && questionIndex >= quizQuestionsArray.length) {
+    answerCheck.textContent=`Well Done! Your Final Score Is: ${secCount}`;
+    finalScoreValue = secCount;
+    setTimeout(scoreReportPage, 1000);
+  } else {
+    answerCheck.textContent=`No Good! Try Again!!`;
+  } 
+}
 
 function checkAnswerButton(event) {
   const choice = event.target;
@@ -90,9 +143,33 @@ function scoreReportPage() {
     returnHomeBtn.style.display = "flex";
     scoreButton.style.visibility = "hidden";
     timer.style.visibility = "hidden";
+    //topScorePage();
 }
 
-function displayFinalScore(event) {
+function topScorePage() {
+  const scores = JSON.parse(localStorage.getItem("scores"));
+  console.log(scores)
+  topScoreContainer.style.display = "block";
+  topScoreContainer.style.visibility = "visible";
+  homePage.style.visibility = "hidden";
+  quizPage.style.visibility = "hidden";
+  initialEntry.style.visibility = "hidden";
+  //returnHomeBtn.style.display = "flex";
+  scoreButton.style.visibility = "hidden";
+  timer.style.visibility = "hidden";
+  //scoreList.innerHTML = "";
+  for (let i=0; i<scores.length; i++) {
+    let li = document.createElement("LI");
+    li.textContent = scores[i].initials + " " + scores[i].score;
+    scoreList.appendChild(li);
+    console.log(scores[i].initials + " " + scores[i].score)
+  }
+  console.log("top score page works")
+  // initialsBtn.style.visibility = "visible";
+  //returnHomeBtn.style.display = "flex";
+}
+
+function saveFinalScore(event) {
   event.preventDefault();
     playerScore = finalScore.textContent;
     var scores = JSON.parse(localStorage.getItem("scores"));
@@ -101,49 +178,14 @@ function displayFinalScore(event) {
     }
     scores.push({initials: initials.value, score: finalScoreValue});
     localStorage.setItem("scores", JSON.stringify(scores));
+    scoreReportContainer.style.display = "none";
+    scoreReportContainer.style.visibility = "hidden";
+    topScorePage();
   }
   
 function resetScore() {
     initialEntry.hidden = true;
     window.localStorage.clear();
-}
-
-function fillQuizBox() {
-    if (questionIndex >= quizQuestionsArray.length) {
-      recordScore();
-      return;
-    }
-    var newQuestion = quizQuestionsArray[questionIndex];
-    question.innerText = newQuestion.questionText;
-    correctAnswer = newQuestion.correctAnswer;
-    a_question.innerText = newQuestion.answers[0];
-    b_question.innerText = newQuestion.answers[1];
-    c_question.innerText = newQuestion.answers[2];
-    d_question.innerText = newQuestion.answers[3];
-  }
-   
-function startTimer() {
-    counter =setInterval(timer,1000);
-
-function timer() {
-    secCount--;
-    timerEl.innerText = "" + secCount;
-        if(secCount == 0) {
-            clearInterval(counter);
-            resetScore();
-        }
-    }
-}
-
-function recordScore() {
-  clearInterval(counter);
-    if(secCount > 0 && questionIndex >= quizQuestionsArray.length) {
-      answerCheck.textContent=`Well Done! Your Final Score Is: ${secCount}`;
-      finalScoreValue = secCount;
-      setTimeout(scoreReportPage, 1000);
-    } else {
-      answerCheck.textContent=`No Good! Try Again!!`;
-    } 
 }
 
 function resetHome() {
@@ -159,7 +201,7 @@ function resetHome() {
 // Define variables for each page/screen
  let startPage = document.getElementById("start-container");
 // const scoreReportPage = document.getElementById("score-report-container");
-const topScorePage = document.getElementById("top-score-container");
+//const topScorePage = document.getElementById("top-score-container");
 
 // Define functions to show and hide each page/screen
 function showStartPage() {
@@ -176,24 +218,13 @@ function showQuizPage() {
   topScorePage.style.display = "none";
 }
 
-function showScoreReportPage() {
-  startPage.style.display = "none";
-  quizPage.style.display = "none";
-  scoreReportPage.style.display = "block";
-  topScorePage.style.display = "none";
-}
+// function showScoreReportPage() {
+//   startPage.style.display = "none";
+//   quizPage.style.display = "none";
+//   scoreReportPage.style.display = "block";
+//   topScorePage.style.display = "none";
+// }
 
-  function startQuiz() {
-    showQuizPage
-    var timeLeft = 60;
-    timerEl.textContent = timeLeft;
-    homePage.style.visibility = "hidden";
-    quizPage.style.display = "flex";
-    scoreReportContainer.style.visibility = "hidden";
-    returnHomeBtn.style.visibility = "hidden";
-    scoreButton.style.display = "flex";
-    startTimer();
-    fillQuizBox();
-}
+  
 
   

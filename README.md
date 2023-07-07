@@ -1,7 +1,5 @@
 # Timed-JS-Quiz
 
-#NEED TO EDIT FOR CURRENT PROJECT
-
 ## Technology Used 
 
 | Technology Used         | Resource URL           | 
